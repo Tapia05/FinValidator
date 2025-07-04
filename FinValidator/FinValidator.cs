@@ -162,7 +162,7 @@ public class Program
         var engine = new FinValidatorEngine(rules);
         var result = engine.Validate(tx);
 
-        Console.WriteLine(result.IsFraud ? "⚠️ Transacción sospechosa" : "✅ Transacción segura");
+        Console.WriteLine(result.IsFraud ? " Transacción sospechosa" : " Transacción segura");
         Console.WriteLine("Puntaje de Riesgo: " + result.RiskScore);
         foreach (var reason in result.Triggers)
             Console.WriteLine("- " + reason);
