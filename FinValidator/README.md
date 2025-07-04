@@ -2,18 +2,18 @@
 
 **FinValidator** es una poderosa librería C# para validaciones financieras, detección de fraude en tiempo real y análisis de riesgo utilizando reglas heurísticas, comportamiento transaccional y lógica dinámica basada en JSON.
 
-## ✨ Características principales
+##  Características principales
 
-- ✅ Validación de montos, países, IPs y frecuencia
-- 🧠 Reglas heurísticas configurables vía JSON
-- 📍 Comparación geográfica entre IP y país declarado
-- 🛡️ Detección de fraude en sistemas de pago
-- ⚖️ Ponderación de riesgo por regla (score dinámico)
-- 🔁 Webhooks o métricas exportables (opcional)
-- 🧪 Pruebas unitarias integradas con xUnit
-- 🚀 Listo para producción y despliegue en NuGet
+-  Validación de montos, países, IPs y frecuencia
+-  Reglas heurísticas configurables vía JSON
+-  Comparación geográfica entre IP y país declarado
+-  Detección de fraude en sistemas de pago
+-  Ponderación de riesgo por regla (score dinámico)
+-  Webhooks o métricas exportables (opcional)
+-  Pruebas unitarias integradas con xUnit
+-  Listo para producción y despliegue en NuGet
 
-## 🔍 Validaciones Incluidas
+##  Validaciones Incluidas
 
 - Monto superior a umbral definido
 - IPs en lista negra (blacklist)
@@ -22,8 +22,8 @@
 - Desajuste entre IP geolocalizada y país declarado
 - Lógica compuesta (AND/OR entre reglas)
 
-## 🧰 Ejemplo de uso
-```csharp
+##  Ejemplo de uso
+c#
 var tx = new TransactionData
 {
     UserId = "cliente123",
@@ -45,22 +45,21 @@ var result = engine.Validate(tx);
 
 if (result.IsFraud)
 {
-    Console.WriteLine("⚠️ Transacción sospechosa:");
+    Console.WriteLine(" Transacción sospechosa:");
     foreach (var r in result.Triggers) Console.WriteLine($"- {r}");
     Console.WriteLine($"Riesgo: {result.RiskScore}");
 }
 ```
 
-## ⚙️ Instalación
+## Instalación
 
-```bash
 dotnet add package FinValidator
 ```
 
-## 📄 Licencia
+## Licencia
 
 MIT License — puedes usarla en productos comerciales y personales.
 
-## 🌐 Repositorio
+##  Repositorio
 
 [https://github.com/Tapia05/FinValidator](https://github.com/Tapia05/FinValidator)
